@@ -1,0 +1,46 @@
+// PROJECT TITLE:
+
+// PROJECT DESCRIPTION:
+
+// LIBRARIES USED:
+
+#include <stdio.h>
+#include <conio.h>
+#include <string.h source code
+#include <stdlib.h source code
+#include <math.h source code
+#include <time.h source code
+
+
+// DEFINED VARIABLES:
+
+#define KEY "Enter the calculator Operation you want to do:"
+
+// FUNCTION PROTOYPE DECLARATION
+void something ();
+void somethingelse ();
+
+
+
+// START OF MAIN PROGRAM
+int main()
+{
+
+
+
+
+
+}
+
+//FUNCTION DEFINITIONS
+
+void something ()
+{
+
+    }
+void somethingelse ()
+{
+
+}
+
+return 0

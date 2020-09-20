@@ -1,0 +1,91 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    char op;
+    float num1, num2, result=0.0f;
+
+    printf("*******************************\n");
+    printf(" _____________________\n"
+           "|  _________________  |\n"
+           "| | THE KIRKULATOR  | |\n"
+           "| |_________________| |\n"
+           "| |x^Y |      |Y^1/2| |\n"
+           "| |____|      |_____| |\n"
+           "| | 7 | 8 | 9 | | + | |\n"
+           "| |___|___|___| |___| |\n"
+           "| | 4 | 5 | 6 | | - | |\n"
+           "| |___|___|___| |___| |\n"
+           "| | 1 | 2 | 3 | | x | |\n"
+           "| |___|___|___| |___| |\n"
+           "| | . | 0 | = | | / | |\n"
+           "| |___|___|___| |___| |\n"
+           "|_____________________|\n");
+    printf("FEED ME NUMBERS\n");
+    printf("[X] [+ - * /] [Y]\n");
+    printf("OR [X] [^] [Y]\n");
+    printf("OR [ANY NUMBER FOR X] [$] SQUARE ROOT [Y]\n");
+    printf("*******************************\n");
+
+    scanf("%f %c %f", &num1, &op, &num2);
+
+    switch(op)
+    {
+        case '+':
+            result = num1 + num2;
+            break; 
+
+        case '-':
+            result = num1 - num2;
+            break;
+
+        case '*':
+            result = num1 * num2;
+            break;
+
+        case '/':
+            if (num2==0.0) {
+                printf("\nYOU DIVIDED BY ZERO\n");
+                  printf("             ___          \n"
+                         "            /   \\\\        \n"
+                         "       /\\\\ | . . \\\\       \n"
+                         "     ////\\\\|     ||       \n"
+                         "   ////   \\\\ ___//\\       \n"
+                         "  ///      \\\\      \\      \n"
+                         " ///       |\\\\      |     \n"
+                         "//         | \\\\  \\   \\    \n"
+                         "/          |  \\\\  \\   \\   \n"
+                         "           |   \\\\ /   /   \n"
+                         "           |    \\/   /    \n"
+                         "           |     \\\\/|     \n"
+                         "           |      \\\\|     \n"
+                         "           |       \\\\     \n"
+                         "           |        |     \n"
+                         "           |_________\\   \n");
+
+                printf("XXXXXXXXXXXXXXXXXXXX\nGAME OVER\n");
+            }
+            else
+            result = num1 / num2;
+            break;
+
+
+        case '^':
+            result = pow(num1, num2);
+            break;
+
+
+        case '$':
+            result = sqrt(num2) * pow(num1,0);
+            break;
+
+        default:
+            printf("Invalid operator");
+    }
+    
+        printf("%.2f %c %.2f = %.2f", num1, op, num2, result);
+
+    return main();
+}
